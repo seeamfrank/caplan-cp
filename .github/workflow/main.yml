@@ -1,0 +1,22 @@
+on: push
+name: íº€ Deploy website con push
+jobs:
+  web-deploy:
+    name:  Iniciando Despliegue íº€
+    runs-on: ubuntu-latest
+    steps:
+    - name:  Obteniendo Nuevo Codigo íºš
+      uses: actions/checkout@v2
+
+    - name:  Sincronizando Archivos í³‚
+      uses: SamKirkland/FTP-Deploy-Action@4.3.2
+      with:
+        server: ${{ secrets.ftp_host }}
+        username: ${{ secrets.ftp_username }}
+        password: ${{ secrets.ftp_password }}
+        server-dir: siam/
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/.github/**
+          Readme.md
