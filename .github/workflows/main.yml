@@ -1,0 +1,22 @@
+on: push
+name: 🚀 Deploy caplan website 
+jobs:
+  web-deploy:
+    name:  Iniciando Despliegue 🚀
+    runs-on: ubuntu-latest
+    steps:
+    - name:  Obteniendo Nuevo Codigo 🚚
+      uses: actions/checkout@v2
+    
+    - name:  Sincronizando Archivos 📂
+      uses: SamKirkland/FTP-Deploy-Action@4.3.2
+      with:
+        server: ${{ secrets.ftp_host }}
+        username: ${{ secrets.ftp_username }}
+        password: ${{ secrets.ftp_password }}
+        server-dir: Control-de-Asistencia-y-Planilla/web/
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/.github/**
+          Readme.md
