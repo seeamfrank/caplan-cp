@@ -1,5 +1,5 @@
 on: push
-name: 🚀 Deploy website con push
+name: 🚀 Deploy caplan website 
 jobs:
   web-deploy:
     name:  Iniciando Despliegue 🚀
