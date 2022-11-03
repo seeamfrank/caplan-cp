@@ -1,11 +1,9 @@
 # catastro_urbano
-<<<<<<< HEAD
 Visit web to preview in:
 
-[WEB-Catastro](catastro-urbano.pages.dev)
+[WEB-Catastro](https://udevs-u.github.io/caplan)
 =======
+
 Web Preproduction:
 
-[WEB-Catastro](catastro-urbano.pages.dev)
 
->>>>>>> dfe72a7530fc68576954ff924f372c48955d2112
